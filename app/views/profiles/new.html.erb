@@ -1,1 +1,50 @@
 <h1>Creata a New Profile!</h1>
+<%= form_for :profile, url: profiles_path do |f|  %>
+    <p>
+        <%= f.label :firstName %><br>
+        <%= f.text_field :firstName %>
+    </p>
+    
+    <p>
+        <%= f.label :lastName %><br>
+        <%= f.text_field :lastName %>
+    </p>
+    
+    <p>
+        <%= f.label :classLevel %><br>
+        <%= f.text_field :classLevel %>
+    </p>
+    
+    <p>
+        <%= f.label :major %><br>
+        <%= f.text_field :major %>
+    </p>
+    
+    <p>
+        <%= f.label :course1 %><br>
+        <%= f.text_field :course1 %>
+    </p>
+    <p>
+        <%= f.label :course2 %><br>
+        <%= f.text_field :course2 %>
+    </p>
+    <p>
+        <%= f.label :course3 %><br>
+        <%= f.text_field :course3 %>
+    </p>
+    <p>
+        <%= f.label :course4 %><br>
+        <%= f.text_field :course4 %>
+    </p>
+    <p>
+        <%= f.label :course5 %><br>
+        <%= f.text_field :course5 %>
+    </p>
+    
+    <!--<input type = "submit" value = "Create profile">-->
+    
+    <p>
+        <%= f.submit value = "Create profile" %>
+    </p>
+
+<% end %>
