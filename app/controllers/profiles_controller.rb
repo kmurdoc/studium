@@ -8,14 +8,17 @@ class ProfilesController < ApplicationController
     end
     
     def new
+        @profile = Profile.new
     end
     
     def create
         @profile = Profile.new(profile_params)
         
-        @profile.save
-        redirect_to @profile
-        
+        if @profile.save
+            redirect_to @profile
+        else
+            render 'new'
+        end
     end
 end
 
