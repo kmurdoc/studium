@@ -1,0 +1,30 @@
+<h1>List of Users</h1>
+ 
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Class Level</th>
+    <th>Major</th>
+    <th>Course #1</th>
+    <th>Course #2</th>
+    <th>Course #3</th>
+    <th>Course #4</th>
+    <th>Course #5</th>
+  </tr>
+ 
+  <% @profiles.each do |profile| %>
+    <tr>
+      <td><%= profile.firstName %></td>
+      <td><%= profile.lastName %></td>
+      <td><%= profile.classLevel %></td>
+      <td><%= profile.major %></td>
+      <td><%= profile.course1 %></td>
+      <td><%= profile.course2 %></td>
+      <td><%= profile.course3 %></td>
+      <td><%= profile.course4 %></td>
+      <td><%= profile.course5 %></td>
+      <td><%= link_to 'Show', profile_path(profile) %></td>
+    </tr>
+  <% end %>
+</table>
